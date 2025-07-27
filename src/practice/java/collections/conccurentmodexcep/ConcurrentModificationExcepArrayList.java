@@ -3,6 +3,7 @@ package practice.java.collections.conccurentmodexcep;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class ConcurrentModificationExcepArrayList {
 	public static void main(String[] args) {
@@ -12,7 +13,12 @@ public class ConcurrentModificationExcepArrayList {
 		
 		//1. Can you write an example for ConcurrentModificationException ?
 		// Yes will try with ArrayList
-		List<Integer> list = new ArrayList<>();
+		List<Integer> list1 = new ArrayList<>();
+		//1.1 How can we resolve this CME ? using CopyOnWriteArrayList, CopyOnWriteArraySet, ConcurrentSkipListSet, LinkedBlockingQueue, ArrayBlockingQueue, PriorityBlockingQueue.
+		// CopyOnWriteArrayList: This class creates a separate copy of the underlying array whenever a structural modification (add, remove, etc.) is made.
+		// As a result, iterators operate over a snapshot of the array at the time the iterator was created,
+		// so structural modifications during iteration do NOT cause ConcurrentModificationException.
+		List<Integer> list = new CopyOnWriteArrayList<>();
 		list.add(10);
 		list.add(20);
 		list.add(30);
@@ -32,6 +38,7 @@ public class ConcurrentModificationExcepArrayList {
 		// it increase the modCount and wherever they checking modCount will get the CME
 		// So, CME is not only related to the multiple threads trying to add/delete the elements while iterating.
 		// It might be single thread also it will come.
+		System.out.println(list);
 	}
 
 }

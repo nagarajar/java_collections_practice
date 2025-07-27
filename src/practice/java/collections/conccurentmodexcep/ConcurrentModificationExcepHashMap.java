@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class ConcurrentModificationExcepHashMap {
 	public static void main(String[] args) {
@@ -13,7 +14,14 @@ public class ConcurrentModificationExcepHashMap {
 		
 		//1. Can you write an example for ConcurrentModificationException ?
 		// Yes will try with HashMap
-		Map<Integer, String> hashMap = new HashMap<>();
+		Map<Integer, String> hashMap1 = new HashMap<>();
+		//1.1 How can we resolve this CME ? using ConcurrentHashMap and ConcurrentSkipListMap
+		// ConcurrentHashMap: This class is designed for concurrent, thread-safe access and modifications.
+		// Its iterators are weakly consistent: they do NOT throw ConcurrentModificationException if the map is modified during iteration.
+		// Unlike CopyOnWriteArrayList, it does NOT create a full copy or snapshot of the data for iteration.
+		// Instead, the iterator may reflect some, all, or none of the modifications made to the map after the iterator was created.
+		// This means you might see new entries added, or not, and you might see removed entries, or not, during iteration.
+		Map<Integer, String> hashMap = new ConcurrentHashMap<>();
 		hashMap.put(1, "A");
 		hashMap.put(2, "H");
 		hashMap.put(3, "l");
@@ -50,6 +58,7 @@ public class ConcurrentModificationExcepHashMap {
 		// it increase the modCount and wherever they checking modCount will get the CME
 		// So, CME is not only related to the multiple threads trying to add/delete the elements while iterating.
 		// It might be single thread also it will come.
+		System.out.println(hashMap);
 	}
 
 }
