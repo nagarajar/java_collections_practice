@@ -1,0 +1,28 @@
+package practice.java.collections.linkedlist;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class LinkedListMainClass {
+	public static void main(String[] args) {
+		// 1. Create the linked list and add the elements then print it.
+		List<Integer> ll = new LinkedList<>();
+		ll.add(10);
+		ll.add(20);
+		ll.add(30);
+		ll.add(40);
+		ll.add(50);
+		System.out.println(ll);
+		
+		//2. Now we need to create the custom linked list like LinkedList
+		//3. Create the CustomLinkedList class then check what is the Data Structure(DS) of LinkedList
+		//4. Create a add method to add the elements like LinkedList
+		CustomLinkedList cll = new CustomLinkedList();
+		cll.add(10);
+		cll.add(20);
+		cll.add(30);
+		cll.add(40);
+		cll.add(50);
+		System.out.println(cll);
+	}
+}
