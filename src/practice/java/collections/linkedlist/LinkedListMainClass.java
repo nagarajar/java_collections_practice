@@ -23,6 +23,8 @@ public class LinkedListMainClass {
 		cll.add(30);
 		cll.add(40);
 		cll.add(50);
+		cll.addBeforeHead(5);
+		cll.addAfterSpecificElement(15, 10); //add 15 after the 10
 		System.out.println(cll);
 	}
 }
