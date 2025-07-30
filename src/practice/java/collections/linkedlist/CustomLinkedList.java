@@ -74,6 +74,49 @@ public class CustomLinkedList {
 		}
 	}
 	
+	//6. remove the given element from the linked list
+	public void remove(int remove) {
+		//There are 3 conditions we have handle while removing
+		//1. if the remove element is at head
+		//2. if the remove element is in mid
+		//3. if the remove element is at last
+		
+		if(head!=null) {
+			//1. if the remove element is at head
+			Node temp = head;
+			Integer data = (Integer) temp.data;
+			int nodeValue =  data.intValue();
+			if(nodeValue==remove) {
+				Node temp1 = temp.next;
+				head = temp1;
+				temp.next=null;
+			} else {
+				//2. if the remove element is in mid
+				Node previous = null;
+				while(temp.next!=null) {
+					data = (Integer) temp.data;
+					nodeValue =  data.intValue();
+					
+					if(nodeValue==remove) {
+						previous.next = temp.next;
+						temp.next = null;
+						return;
+					} else {
+						previous = temp;
+						temp = temp.next;
+					}
+				}
+				//3. if the remove element is at last
+				data = (Integer) temp.data;
+				nodeValue =  data.intValue();
+				if(nodeValue==remove && null!=previous) {
+					previous.next = null;
+				}
+			}
+			
+		}
+	}
+	
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub

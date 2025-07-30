@@ -26,5 +26,15 @@ public class LinkedListMainClass {
 		cll.addBeforeHead(5);
 		cll.addAfterSpecificElement(15, 10); //add 15 after the 10
 		System.out.println(cll);
+		//There are 3 conditions we have handle while removing
+		//1. if the remove element is at head
+		cll.remove(5);
+		System.out.println(cll);
+		//2. if the remove element is in mid
+		cll.remove(30);
+		System.out.println(cll);
+		//3. if the remove element is at last
+		cll.remove(50);
+		System.out.println(cll);
 	}
 }
