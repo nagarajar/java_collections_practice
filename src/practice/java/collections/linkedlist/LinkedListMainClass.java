@@ -23,7 +23,9 @@ public class LinkedListMainClass {
 		cll.add(30);
 		cll.add(40);
 		cll.add(50);
+		System.out.println(cll);
 		cll.addBeforeHead(5);
+		System.out.println(cll);
 		cll.addAfterSpecificElement(15, 10); //add 15 after the 10
 		System.out.println(cll);
 		//There are 3 conditions we have handle while removing

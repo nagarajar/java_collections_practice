@@ -1,5 +1,7 @@
 package practice.java.collections.linkedlist;
 
+import java.util.StringJoiner;
+
 public class CustomLinkedList {
 	//1. What is the Data Structure of LinkedList(LL)
 	//ans: its Node --> which includes data(Object) and next(Node - next node reference)
@@ -119,6 +121,26 @@ public class CustomLinkedList {
 	
 	@Override
 	public String toString() {
+//		return printLinkedListUsingString();
+		return printLinkedListUsingStringJoiner();
+	}
+	
+	private String printLinkedListUsingStringJoiner() {
+		if(head==null) {
+			return "[]";
+		} else {
+			StringJoiner sj = new StringJoiner(", ", "[", "]");
+			Node temp = head;
+			while(temp.next != null) {
+				sj.add(temp.data.toString());
+				temp=temp.next;
+			}
+			sj.add(temp.data.toString());
+			return sj.toString();
+		}
+	}
+
+	private String printLinkedListUsingString() {
 		// TODO Auto-generated method stub
 		String s = "[";
 		//3.3 check the first node null
