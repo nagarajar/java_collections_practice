@@ -19,6 +19,7 @@ public class SortArrayList {
 		
 		//2. Sort using the Collections
 		Collections.sort(l);
+		Collections.reverse(l);
 		System.out.println("After sort: "+l);
 		
 		
