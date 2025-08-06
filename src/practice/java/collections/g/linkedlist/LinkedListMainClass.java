@@ -43,5 +43,44 @@ public class LinkedListMainClass {
 		//3. if the remove element is at last
 		cll.remove(50);
 		System.out.println(cll);
+		
+		System.out.println("************************************************");
+		CustomLinkedListWithIndex cllI = new CustomLinkedListWithIndex();
+		cllI.add(10);
+		cllI.add(20);
+		cllI.add(30);
+		cllI.add(40);
+		cllI.add(50);
+		System.out.println(cllI);
+		System.out.println("size: "+cllI.getSize());
+		cllI.addBeforeHead(5);
+		System.out.println(cllI);
+		System.out.println("size: "+cllI.getSize());
+		cllI.addAfterSpecificElement(7, 5); //add 7 after head
+		System.out.println(cllI);
+		System.out.println("size: "+cllI.getSize());
+		cllI.addAfterSpecificElement(15, 10); //add 15 after the 10
+		System.out.println(cllI);
+		System.out.println("size: "+cllI.getSize());
+		cllI.addAfterSpecificElement(60, 50); //add 60 after the last
+		System.out.println(cllI);
+		System.out.println("size: "+cllI.getSize());
+		//There are 3 conditions we have handle while removing
+		//1. if the remove element is at head
+		cllI.remove(5);
+		System.out.println(cllI);
+		System.out.println("size: "+cllI.getSize());
+		//2. if the remove element is in mid
+		cllI.remove(30);
+		System.out.println(cllI);
+		System.out.println("size: "+cllI.getSize());
+		//3. if the remove element is at last
+		cllI.remove(50);
+		System.out.println(cllI);
+		System.out.println("size: "+cllI.getSize());
+		
+		System.out.println("get data at index 2: "+cllI.get(2));
+		System.out.println("get data at index 6: "+cllI.get(5));
+		
 	}
 }
