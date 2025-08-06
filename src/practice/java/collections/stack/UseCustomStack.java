@@ -32,7 +32,7 @@ public class UseCustomStack {
 		
 		System.out.println("***********************************************");
 		//Try the same by your custom stack
-		CustomStack customStack = new CustomStack();
+		CustomStackImpArrayList customStack = new CustomStackImpArrayList();
 		customStack.push(10);
 		customStack.push(20);
 		customStack.push(30);
@@ -45,5 +45,29 @@ public class UseCustomStack {
 		System.out.println("Custom Stack: "+customStack);
 		System.out.println("Custom Stack:isEmpty() "+customStack.isEmpty());
 		System.out.println("Stack:search(item) "+customStack.search(30));
+		
+		System.out.println("***********************************************");
+		
+		//Try the same by your custom stack
+		CustomStackImpLinkedList cSLl = new CustomStackImpLinkedList();
+		cSLl.push(10);
+		cSLl.push(20);
+		cSLl.push(30);
+		cSLl.push(40);
+		cSLl.push(50);
+		System.out.println("Custom Stack by LL: "+cSLl);
+		System.out.println("Custom Stack by LL:pop() - "+cSLl.pop());
+		System.out.println("Custom Stack by LL: "+cSLl);
+		System.out.println("Custom Stack by LL:peek() "+cSLl.peek());
+		System.out.println("Custom Stack by LL: "+cSLl);
+		System.out.println("Custom Stack by LL:pop() - "+cSLl.pop());
+		System.out.println("Custom Stack by LL: "+cSLl);
+		System.out.println("Custom Stack by LL:peek() "+cSLl.peek());
+		System.out.println("Custom Stack by LL: "+cSLl);
+//		System.out.println("Custom Stack:isEmpty() "+cSLl.isEmpty());
+//		System.out.println("Stack:search(item) "+cSLl.search(30));
+		
+		
+		
 	}
 }

@@ -1,6 +1,6 @@
 package practice.java.collections.stack;
 
-public class CustomStack extends CustomVectorList{
+public class CustomStackImpArrayList extends CustomVectorList{
 	
 	public Object push(Object o) {
 		add(o);
