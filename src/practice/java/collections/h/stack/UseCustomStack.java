@@ -29,6 +29,16 @@ public class UseCustomStack {
 		System.out.println("Stack: "+stack);
 		System.out.println("Stack:isEmpty() "+stack.isEmpty());
 		System.out.println("Stack:search(item) "+stack.search(30));
+		System.out.println("Stack:pop() - "+stack.pop());
+		System.out.println("Stack: "+stack);
+		System.out.println("Stack:pop() - "+stack.pop());
+		System.out.println("Stack: "+stack);
+		System.out.println("Stack:pop() - "+stack.pop());
+		System.out.println("Stack: "+stack);
+		System.out.println("Stack:pop() - "+stack.pop());
+		System.out.println("Stack: "+stack);
+//		System.out.println("Stack:pop() - "+stack.pop()); //Note If we are trying to do pop() on Empty stack, will get java.util.EmptyStackException
+		//Because If will delete always the last element there is chance of index get into -ve value that's y will get java.util.EmptyStackException
 		
 		System.out.println("***********************************************");
 		//Try the same by your custom stack
