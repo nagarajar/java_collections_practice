@@ -79,6 +79,33 @@ public class UseCustomQueue {
 		System.out.println("Queue poll: "+aIUAL.poll());//null //Because Queue is empty
 		System.out.println("Queue peek: "+aIUAL.peek());//null //Because Queue is empty
 
+		System.out.println("**************QueueImplUsingLL**************");
+		QueueImplUsingLL aIULL = new QueueImplUsingLL();
+		aIULL.add(10);
+		aIULL.add(20);
+		aIULL.add(30);
+		aIULL.add(40);
+		aIULL.add(50);
+		aIULL.add(60);
+		
+		System.out.println("Queue: "+aIULL);//[10,20,30,40,50,60]
+		System.out.println("Queue peek: "+aIULL.peek()); //10
+		System.out.println("Queue: "+aIULL);//[10,20,30,40,50,60]
+		System.out.println("Queue poll: "+aIULL.poll());//10
+		System.out.println("Queue: "+aIULL);//[20,30,40,50,60]
+		System.out.println("Queue peek: "+aIULL.peek()); //20
+		System.out.println("Queue: "+aIULL);//[20,30,40,50,60]
+		System.out.println("Queue poll: "+aIULL.poll());//20
+		System.out.println("Queue: "+aIULL);//[30,40,50,60]
+		System.out.println("Queue poll: "+aIULL.poll());//30
+		System.out.println("Queue: "+aIULL);//[40,50,60]
+		System.out.println("Queue poll: "+aIULL.poll());//40
+		System.out.println("Queue: "+aIULL);//[50,60]
+		System.out.println("Queue poll: "+aIULL.poll());//50
+		System.out.println("Queue poll: "+aIULL.poll());//60
+		System.out.println("Queue: "+aIULL);//[]
+		System.out.println("Queue poll: "+aIULL.poll());//null //Because Queue is empty
+		System.out.println("Queue peek: "+aIULL.peek());//null //Because Queue is empty
 		
 
 	}
