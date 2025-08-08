@@ -3,7 +3,7 @@ package practice.java.collections.i.queue;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class UseCustomQuaue {
+public class UseCustomQueue {
 
 	public static void main(String[] args) {
 		/*
@@ -50,6 +50,34 @@ public class UseCustomQuaue {
 		System.out.println("Queue: "+q);//[]
 		System.out.println("Queue poll: "+q.poll());//null //Because Queue is empty
 		System.out.println("Queue peek: "+q.peek());//null //Because Queue is empty
+		
+		System.out.println("**************QueueImplUsingAL**************");
+		QueueImplUsingAL aIUAL = new QueueImplUsingAL();
+		aIUAL.add(10);
+		aIUAL.add(20);
+		aIUAL.add(30);
+		aIUAL.add(40);
+		aIUAL.add(50);
+		aIUAL.add(60);
+		
+		System.out.println("Queue: "+aIUAL);//[10,20,30,40,50,60]
+		System.out.println("Queue peek: "+aIUAL.peek()); //10
+		System.out.println("Queue: "+aIUAL);//[10,20,30,40,50,60]
+		System.out.println("Queue poll: "+aIUAL.poll());//10
+		System.out.println("Queue: "+aIUAL);//[20,30,40,50,60]
+		System.out.println("Queue peek: "+aIUAL.peek()); //20
+		System.out.println("Queue: "+aIUAL);//[20,30,40,50,60]
+		System.out.println("Queue poll: "+aIUAL.poll());//20
+		System.out.println("Queue: "+aIUAL);//[30,40,50,60]
+		System.out.println("Queue poll: "+aIUAL.poll());//30
+		System.out.println("Queue: "+aIUAL);//[40,50,60]
+		System.out.println("Queue poll: "+aIUAL.poll());//40
+		System.out.println("Queue: "+aIUAL);//[50,60]
+		System.out.println("Queue poll: "+aIUAL.poll());//50
+		System.out.println("Queue poll: "+aIUAL.poll());//60
+		System.out.println("Queue: "+aIUAL);//[]
+		System.out.println("Queue poll: "+aIUAL.poll());//null //Because Queue is empty
+		System.out.println("Queue peek: "+aIUAL.peek());//null //Because Queue is empty
 
 		
 
